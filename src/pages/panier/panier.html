@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Panier
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list inset>
+      <ion-item *ngFor="let pizza of pizzas">
+        <h2>{{pizza.name}}</h2>
+        <p>{{pizza.desc}}</p>
+        <img width="100px" height="100px" src="{{pizza.picture}}"/>
+        <button ion-button>Ajouter au panier</button>
+      </ion-item>
+    </ion-list>
+    <button  [navPush]="Admin">Button</button>
+</ion-content>
+
